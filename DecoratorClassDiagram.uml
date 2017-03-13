@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_ddw14Ad6Eeetff2fAFgS_w" name="model">
+  <ownedComment xmi:id="_PVJYkAd-Eeetff2fAFgS_w" annotatedElement="_qC304Ad9Eeetff2fAFgS_w">
+    <body>component->operation()</body>
+  </ownedComment>
+  <ownedComment xmi:id="_SISOkAd-Eeetff2fAFgS_w" annotatedElement="_CU-t4Ad-Eeetff2fAFgS_w">
+    <body>Decorator::operation()</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kNYBIAd9Eeetff2fAFgS_w" name="Component">
+    <ownedOperation xmi:id="_zCQxwAd9Eeetff2fAFgS_w" name="operation"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pIhsgAd9Eeetff2fAFgS_w" name="ConcreteComponent">
+    <generalization xmi:id="_tWuLQAd9Eeetff2fAFgS_w" general="_kNYBIAd9Eeetff2fAFgS_w"/>
+    <ownedOperation xmi:id="_zopcUAd9Eeetff2fAFgS_w" name="operation"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qC304Ad9Eeetff2fAFgS_w" name="Decorator">
+    <generalization xmi:id="_t_OVsAd9Eeetff2fAFgS_w" general="_kNYBIAd9Eeetff2fAFgS_w"/>
+    <ownedOperation xmi:id="_0KXpUAd9Eeetff2fAFgS_w" name="operation"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1NghUwd9Eeetff2fAFgS_w" name="component_decorator_1" memberEnd="_1NghVAd9Eeetff2fAFgS_w _1NghUAd9Eeetff2fAFgS_w">
+    <ownedEnd xmi:id="_1NghVAd9Eeetff2fAFgS_w" name="component" type="_kNYBIAd9Eeetff2fAFgS_w" aggregation="shared" association="_1NghUwd9Eeetff2fAFgS_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1NghVQd9Eeetff2fAFgS_w" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1NghVgd9Eeetff2fAFgS_w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_1NghUAd9Eeetff2fAFgS_w" name="decorator" type="_qC304Ad9Eeetff2fAFgS_w" association="_1NghUwd9Eeetff2fAFgS_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1NghUQd9Eeetff2fAFgS_w" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1NghUgd9Eeetff2fAFgS_w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BLL0QAd-Eeetff2fAFgS_w" name="ConcreteDecoratorA">
+    <generalization xmi:id="_MEVIEAd-Eeetff2fAFgS_w" general="_qC304Ad9Eeetff2fAFgS_w"/>
+    <ownedOperation xmi:id="_G5IOgAd-Eeetff2fAFgS_w" name="operation"/>
+    <ownedOperation xmi:id="_IyzF4Ad-Eeetff2fAFgS_w" name="addedResponsibility"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_CU-t4Ad-Eeetff2fAFgS_w" name="ConcreteDecoratorB">
+    <generalization xmi:id="_MirQ8Ad-Eeetff2fAFgS_w" general="_qC304Ad9Eeetff2fAFgS_w"/>
+    <ownedOperation xmi:id="_J-3QYAd-Eeetff2fAFgS_w" name="operation"/>
+    <ownedOperation xmi:id="_KiMm8Ad-Eeetff2fAFgS_w" name="addedResponsibility"/>
+  </packagedElement>
+</uml:Model>
