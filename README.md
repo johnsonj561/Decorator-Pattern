@@ -80,4 +80,6 @@ Source Code: http://www.newthinktank.com/2012/09/decorator-design-pattern-tutori
 		- decorators are transparent to the component
 		
 ##Related Patterns
-
+- adapter
+- composite
+- strategy
