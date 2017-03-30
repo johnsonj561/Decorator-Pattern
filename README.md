@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------------------------------------
-#The Decorator Pattern
+# The Decorator Pattern
 
-###Sources:
+### Sources:
 Notes below regarding decorator pattern taken from "Design Patterns - Elements of Reusable Object-Oriented Software"
 By Gamma, Helm, Johnson, Vlissides
 
@@ -9,20 +9,20 @@ Example Code provided by Derek Banas:
 Tutorial: https://www.youtube.com/watch?v=j40kRwSm4VE
 Source Code: http://www.newthinktank.com/2012/09/decorator-design-pattern-tutorial/
 
-###Author: Justin J
+### Author: Justin J
 
-###Purpose: FAU Object Oriented Software Design Course, Sprint 2017
+### Purpose: FAU Object Oriented Software Design Course, Sprint 2017
 
 ----------------------------------------------------------------------------------------------------------------
 
-##Intent
+## Intent
 - Attach additional responsibilities to an object dynamically
 - provide a flexible alternative to subclassing for extending functionality
 
-##Also Known As
+## Also Known As
 - Wrapper
 
-##Motivation
+## Motivation
 - sometimes there is need to add responsibility to specific object, but not an entire class
 - inheritance is static and must be done pre-compilation
 - more flexible -> enclose the object in another object that adds desired functionality
@@ -30,29 +30,29 @@ Source Code: http://www.newthinktank.com/2012/09/decorator-design-pattern-tutori
 	- decorators presence is transparent because it conforms to object's interface
 - decorators can be nested recursively
 
-##Applicability
+## Applicability
 - to add responsibilities to individual objects dynamically and transparently, without side effects
 - for responsibilities that can be withdrawn
 - when extension through subclassing is impractical
 
-##Structure
+## Structure
 ![alt text](DecoratorPattern.png "State Pattern") 
 
-##Participants
-####Component
+## Participants
+#### Component
 - defines the interface for objects that can have responsibilities added to them dynamically
-####Concrete Component
+#### Concrete Component
 - defines an object to which additional responsibilities can be attached
-####Decorator
+#### Decorator
 - maintains a reference to a Component object and defines an interface that conforms to Component's interface
-####Concrete Decorator
+#### Concrete Decorator
 - adds responsibilities to the component
 
-##Collaborations
+## Collaborations
 - Decorator forwards requests to its Component object
 	- may perform additional operations before/after forwarding the request
 
-##Consequences
+## Consequences
 - More flexibility than static inheritance
 	- add/remove responsibility at run time
 	- providing different Decorator classes lets you mix and match responsibilities
@@ -65,7 +65,7 @@ Source Code: http://www.newthinktank.com/2012/09/decorator-design-pattern-tutori
 	- often results in systems composed of lots of little objects that all look alike
 	- can be difficult to learn and debug at first
 
-##Implementation
+## Implementation
 - Interface Conformance
 	- interface must conform to inerface of component it decorates
 	- Concrete decorator must therefore inherit from a common class-
@@ -79,7 +79,7 @@ Source Code: http://www.newthinktank.com/2012/09/decorator-design-pattern-tutori
 	- since the decorator pattern only changes a component from outside, the component doesn't have to know anything about it's decorators
 		- decorators are transparent to the component
 		
-##Related Patterns
+## Related Patterns
 - adapter
 - composite
 - strategy
